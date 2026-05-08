@@ -1,0 +1,310 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Fredoka', sans-serif;
+}
+
+body{
+  background:#FFE5EC;
+  color:#5b2b37;
+  overflow-x:hidden;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+/*
+========================================
+GAMBAR OTOMATIS RESPONSIVE
+UPLOAD LANGSUNG SESUAI UKURAN
+TANPA EDIT CSS LAGI
+========================================
+*/
+
+.hero-image img,
+.gallery-item img{
+  object-fit:contain;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* NAVBAR */
+
+header{
+  width:100%;
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:white;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+.logo{
+  font-size:1.7rem;
+  color:#FB6F92;
+  font-weight:600;
+}
+
+nav{
+  display:flex;
+  gap:20px;
+}
+
+nav a{
+  color:#a74c63;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#FB6F92;
+}
+
+/* HERO */
+
+.hero{
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:50px;
+  flex-wrap:wrap;
+  padding:60px 8%;
+}
+
+.hero-image{
+  flex:1;
+  min-width:300px;
+  max-width:420px;
+}
+
+.hero-image img{
+  border-radius:30px;
+  border:8px solid white;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.hero-text{
+  flex:1;
+  min-width:300px;
+}
+
+.hero-text h1{
+  font-size:3rem;
+  color:#FB6F92;
+  margin-bottom:15px;
+}
+
+.hero-text p{
+  line-height:1.8;
+  margin-bottom:25px;
+  font-size:1.1rem;
+}
+
+.btn{
+  display:inline-block;
+  padding:15px 28px;
+  background:#FB6F92;
+  color:white;
+  border-radius:50px;
+  transition:0.3s;
+  box-shadow:0 10px 20px rgba(251,111,146,0.35);
+}
+
+.btn:hover{
+  transform:translateY(-5px) scale(1.05);
+  background:#ff4f7f;
+}
+
+/* TITLE */
+
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  color:#FB6F92;
+  font-size:2.2rem;
+}
+
+/* PRICELIST */
+
+.pricing{
+  padding:80px 8%;
+}
+
+.price-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.price-card{
+  background:white;
+  padding:30px;
+  border-radius:25px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.price-card:hover{
+  transform:translateY(-10px);
+}
+
+.price-card h3{
+  color:#FB6F92;
+  margin-bottom:10px;
+  font-size:1.5rem;
+}
+
+.price{
+  font-size:2rem;
+  font-weight:600;
+  margin-bottom:15px;
+}
+
+.price-card p{
+  line-height:1.7;
+}
+
+/* GALLERY */
+
+.gallery{
+  padding:80px 8%;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.gallery-item{
+  background:white;
+  padding:10px;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.gallery-item:hover{
+  transform:translateY(-8px);
+}
+
+.gallery-item img{
+  border-radius:15px;
+}
+
+/* TERMS */
+
+.terms{
+  padding:80px 8%;
+}
+
+.terms-box{
+  background:white;
+  padding:35px;
+  border-radius:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.terms-box ul{
+  padding-left:20px;
+}
+
+.terms-box li{
+  margin-bottom:15px;
+  line-height:1.7;
+}
+
+/* CTA */
+
+.cta{
+  padding:80px 8%;
+  text-align:center;
+}
+
+.cta h2{
+  font-size:2.3rem;
+  color:#FB6F92;
+  margin-bottom:20px;
+}
+
+.cta p{
+  margin-bottom:30px;
+}
+
+.order-btn{
+  display:inline-block;
+  padding:18px 35px;
+  background:#FB6F92;
+  color:white;
+  border-radius:60px;
+  font-size:1.2rem;
+  transition:0.3s;
+  animation:float 2s infinite ease-in-out;
+  box-shadow:0 10px 25px rgba(251,111,146,0.35);
+}
+
+.order-btn:hover{
+  transform:scale(1.08);
+  background:#ff4d7d;
+}
+
+@keyframes float{
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-8px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+}
+
+/* FOOTER */
+
+footer{
+  margin-top:50px;
+  padding:25px;
+  text-align:center;
+  background:#ffd6e0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero-text{
+    text-align:center;
+  }
+
+  .hero-text h1{
+    font-size:2.3rem;
+  }
+
+}
